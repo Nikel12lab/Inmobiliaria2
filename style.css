@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1b1726;
+    color: #ffffff;
+}
+
+img {
+    max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
+    height: auto; /* Deja que la altura se ajuste automáticamente */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-image: url("images/images/francesca-tosolini-tHkJAMcO3QE-unsplash.jpg");
+    background-size: cover; /* Cambia a cover para mejor adaptación */
+    background-position: center;
+    width: 100%; /* Define el ancho del elemento */
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+.logo {
+    color: #ffa12c;
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.menu .navbar ul {
+    display: flex;
+    gap: 30px;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: #ffa12c;
+}
+
+.header-txt {
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    z-index: 5;
+}
+
+.header-txt h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.header-txt span {
+    color: #ffa12c;
+}
+
+.header-txt p {
+    font-size: 18px;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.butons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-1, .btn-2 {
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.btn-1 {
+    background-color: #ffa12c;
+    color: white;
+    border: 2px solid #ffa12c;
+}
+
+.btn-1:hover {
+    background-color: transparent;
+    color: #ffa12c;
+}
+
+.btn-2 {
+    background-color: #ffffff;
+    color: #1b1726;
+    border: 2px solid transparent;
+}
+
+.btn-2:hover {
+    background-color: #ffa12c;
+    color: white;
+}
+
+/* Sección de inmuebles populares */
+.popular {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.h2 {
+    color: #ffa12c;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.popular-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-content {
+    background-color: #2b2237;
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.product-content:hover {
+    transform: translateY(-10px);
+}
+
+.product-content img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.product-txt h3 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price p {
+    font-size: 18px;
+    color: #ffa12c;
+}
+
+/* Sección de contacto */
+.contact {
+    padding: 80px 20px;
+    background-color: #27212f;
+    border-radius: 20px;
+    text-align: center;
+    margin: 50px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contac-content h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, .btn-3 {
+    width: 100%;
+    max-width: 500px;
+}
+
+input {
+    padding: 15px;
+    border-radius: 25px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 17px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input::placeholder {
+    color: #e0e0e0;
+}
+
+input:focus {
+    border-color: #ffa12c;
+}
+
+.btn-3 {
+    background-color: #ffa12c;
+    color: #1b1726;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.btn-3:hover {
+    background-color: #ffffff;
+    color: #ffa12c;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    .header {
+        height: 50vh; /* Ajusta la altura del header en pantallas más pequeñas */
+        padding: 50px 20px;
+    }
+
+    .header-txt h1 {
+        font-size: 40px;
+    }
+
+    .butons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .popular {
+        padding: 50px 0;
+    }
+
+    .product-content {
+        padding: 20px;
+    }
+
+    .popular-content {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 600px) {
+    .popular-content, .gallery-content {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #1b1726;
+    padding: 40px 20px;
+    color: #ffffff;
+    text-align: center;
+    border-top: 2px solid #ffa12c;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffa12c;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffa12c;
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+.footer-socials {
+    margin: 20px 0;
+}
+
+.footer-socials a {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2b2237;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.footer-socials a:hover {
+    background-color: #ffa12c;
+    color: #ffffff;
+}
+
+/* Sección de asesores */
+.asesores {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.asesores h2 {
+    color: #ffa12c;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.asesores-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.asesor {
+    background-color: #2b2237;
+    border-radius: 50%; /* Mantiene el diseño circular */
+    padding: 15px; /* Reduce el padding para hacer el círculo más estrecho */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    width: 400px; /* Aumenta el ancho del círculo */
+    height: 400px; /* Aumenta la altura del círculo */
+}
+
+.asesor:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+.asesor img {
+    width: 150px; /* Aumenta el tamaño de la imagen */
+    height: 150px; /* Mantiene la imagen cuadrada */
+    border-radius: 50%; /* Hace que la imagen también sea circular */
+    margin-bottom: 10px;
+}
+
+.asesor h3 {
+    font-size: 20px; /* Ajusta el tamaño de la fuente del nombre */
+    color: #ffffff;
+    margin: 5px 0; /* Reduce el margen del nombre */
+}
+
+.asesor p {
+    font-size: 14px; /* Ajusta el tamaño de la fuente de la descripción */
+    color: #e0e0e0;
+    text-align: center; /* Centra el texto */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .asesores-content {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .asesores-content {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
